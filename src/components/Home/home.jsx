@@ -1,9 +1,11 @@
 import React from 'react'
 import './home.css'
 
+// Container component
+
 const Home = () => {
   return (
-    <div className="test-class">
+    <div className="container">
       Home component
     </div>
   )
