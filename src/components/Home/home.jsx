@@ -1,13 +1,15 @@
 import React from 'react'
 import './home.css'
 
-// Container component
+// Wrapper component for the app
+import LandingPage from '../LandingPage/landingPage'
+
 
 const Home = () => {
   return (
-    <div className="container">
-      Home component
-    </div>
+    <main className="container">
+      <LandingPage />
+    </main>
   )
 }
 

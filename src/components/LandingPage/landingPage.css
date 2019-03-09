@@ -1,0 +1,33 @@
+.lp-sec {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url('https://upload.wikimedia.org/wikipedia/en/c/c0/Sachin_tendulkar_signature.png'); */
+}
+
+.num {
+  font-size: 150px;
+  font-family: monospace;
+}
+
+.name {
+  font-size: 100px;
+  /* color: white; */
+}
+
+.lp-content {
+  width: 50%;
+}
+
+.lp-image {
+  width: 50%;
+  background-position: center center;
+  background-size: contain;
+  height: 90%;
+  background-repeat: no-repeat;
+  /* background-image: url('./sachin.png'); */
+  border-radius: 10px;
+  overflow: hidden;
+}

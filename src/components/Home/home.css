@@ -2,11 +2,12 @@ body {
     margin: 0px;
     padding: 0px;
     will-change: transform;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .container {
     min-height: 100vh;
-    border: 1px solid;
     display: flex;
     flex-direction: column;
 }
