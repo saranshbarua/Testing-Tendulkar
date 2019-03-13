@@ -4,7 +4,7 @@ export default class AnimatedCounter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: this.props.target - 300
+      counter: this.props.target - 100
     };
   }
 
@@ -17,10 +17,10 @@ export default class AnimatedCounter extends Component {
       } else {
         clearInterval(counter);
       }
-    }, 0);
+    }, 16.72);
   }
 
   render() {
-    return <div style={{ display: "flex" }}>{this.state.counter}&nbsp;</div>;
+    return <React.Fragment>{this.state.counter}&nbsp;</React.Fragment>;
   }
 }

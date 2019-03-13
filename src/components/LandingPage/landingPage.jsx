@@ -26,8 +26,9 @@ const LandingPage = () => {
               color: "white"
             }}
           >
-            Lorem ipsum is placeholder text commonly used in the graphic, print,
-            and publishing industries for previewing layouts and visual mockups.
+            "I hate losing and cricket being my first love, once I enter the
+            ground it's a different zone altogether and that hunger for winning
+            is always there."
           </p>
           <Fade bottom delay={10000}>
             <a href="#insightsSection" className="ssp-400 insights-button">
