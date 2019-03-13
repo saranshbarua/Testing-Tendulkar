@@ -26,12 +26,19 @@ const LandingPage = () => {
               color: "white"
             }}
           >
-            I hate losing and cricket being my first love, once I enter the
-            ground it's a different zone altogether and that hunger for winning
-            is always there.
+            “Sachin Tendulkar is a former Indian cricketer, widely regarded to
+            be the greatest cricketer of all time.”
+          </p>
+          <p
+            className="ssp-300"
+            style={{
+              color: "white"
+            }}
+          >
+            Is he really?
           </p>
           <Fade bottom delay={10000}>
-            <a href="#insightsSection" className="ssp-400 insights-button">
+            <a href="/dashboard" className="ssp-400 insights-button">
               See career insights
             </a>
           </Fade>
