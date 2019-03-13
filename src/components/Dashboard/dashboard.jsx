@@ -1,12 +1,19 @@
-import React, { Component } from 'react'
-import './dashboard.css'
+import React, { Component } from "react";
+import "./dashboard.css";
+import * as Recharts from "recharts";
 
 export default class Dashboard extends Component {
   render() {
-    return (
-      <div className="dash-cont">
-        Dashboard
-      </div>
-    )
+    const {
+      LineChart,
+      Line,
+      XAxis,
+      YAxis,
+      CartesianGrid,
+      Tooltip,
+      Legend
+    } = Recharts;
+
+    return <div>Stats</div>;
   }
 }

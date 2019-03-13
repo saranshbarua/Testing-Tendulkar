@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.8.4",
+    "react-anime": "^2.2.0",
     "react-dom": "^16.8.4",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^4.3.1",

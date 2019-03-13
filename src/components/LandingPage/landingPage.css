@@ -1,10 +1,9 @@
 .lp-sec {
-  width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  /* background-image: url('https://upload.wikimedia.org/wikipedia/en/c/c0/Sachin_tendulkar_signature.png'); */
 }
 
 .num {
@@ -17,17 +16,29 @@
   /* color: white; */
 }
 
-.lp-content {
-  width: 50%;
+.lp-image {
+  width: 100%;
+  border: 1px solid red;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.lp-image {
-  width: 50%;
-  background-position: center center;
-  background-size: contain;
-  height: 90%;
-  background-repeat: no-repeat;
-  /* background-image: url('./sachin.png'); */
-  border-radius: 10px;
-  overflow: hidden;
+.lp-content {
+  width: 100%;
+  border: 1px solid lime;
+  min-height: 200px;
+}
+
+@media screen and (min-width: 800px) {
+  .lp-sec {
+    flex-direction: row-reverse;
+  }
+
+  .lp-image,
+  .lp-content {
+    width: 50%;
+    height: 100%;
+  }
 }
