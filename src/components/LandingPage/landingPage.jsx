@@ -30,9 +30,9 @@ const LandingPage = () => {
             and publishing industries for previewing layouts and visual mockups.
           </p>
           <Fade bottom delay={10000}>
-            <button className="ssp-400 insights-button">
+            <a href="#insightsSection" className="ssp-400 insights-button">
               See career insights
-            </button>
+            </a>
           </Fade>
         </Fade>
       </div>

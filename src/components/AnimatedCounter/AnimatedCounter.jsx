@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Fade } from "react-reveal";
 
 export default class AnimatedCounter extends Component {
   constructor(props) {
@@ -22,6 +21,6 @@ export default class AnimatedCounter extends Component {
   }
 
   render() {
-    return <Fade>{this.state.counter}&nbsp;</Fade>;
+    return <div style={{ display: "flex" }}>{this.state.counter}&nbsp;</div>;
   }
 }

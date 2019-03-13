@@ -1,9 +1,11 @@
+// Wrapper component for the app
 import React from "react";
 import "./home.css";
 
-// Wrapper component for the app
+// Components
 import LandingPage from "../LandingPage/landingPage";
-import Insights from "../Insights/runsSection";
+import Insights from "../Insights/insights";
+
 const Home = () => {
   return (
     <main className="container">

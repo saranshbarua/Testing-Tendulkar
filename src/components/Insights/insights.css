@@ -1,7 +1,37 @@
-.runs {
+.insights {
   min-height: 50vh;
+  border: 5px solid;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 50px;
+  color: #37474f;
+}
+
+.insights-section {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+@media screen and (min-width: 400px) {
+  .insights-section {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .insights {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .insights-section {
+    min-height: 50vh;
+    font-size: 40px;
+    font-weight: 300;
+  }
 }
