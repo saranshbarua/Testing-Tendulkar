@@ -29,9 +29,11 @@ const LandingPage = () => {
             Lorem ipsum is placeholder text commonly used in the graphic, print,
             and publishing industries for previewing layouts and visual mockups.
           </p>
-          <button className="ssp-400 insights-button">
-            See career insights
-          </button>
+          <Fade bottom delay={10000}>
+            <button className="ssp-400 insights-button">
+              See career insights
+            </button>
+          </Fade>
         </Fade>
       </div>
     </section>
