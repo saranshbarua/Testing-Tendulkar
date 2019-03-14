@@ -7,7 +7,7 @@ const teamData = [
     matches: "23"
   },
   {
-    name: "New Zealand",
+    name: "Pakistan",
     matches: "23"
   },
   {
@@ -56,21 +56,27 @@ const teamData = [
   }
 ];
 
-const Cards = () => {
+const Cards = props => {
   return teamData.map((item, i) => {
     return (
-      <div className="team-card" key={i}>
+      <li
+        className="team-card"
+        value="nameeee"
+        key={i}
+        onClick={props.changeTeam}
+        data-id={item.name}
+      >
         <p className="ssp-400">{item.name}</p>
         {/* <p className="team-matches">{item.matches}</p> */}
-      </div>
+      </li>
     );
   });
 };
 
-const Teamcards = () => {
+const Teamcards = props => {
   return (
     <div className="team-cards-container">
-      <Cards />
+      <Cards changeTeam={props.changeTeamContext} />
     </div>
   );
 };
