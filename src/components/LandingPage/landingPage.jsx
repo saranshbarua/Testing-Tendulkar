@@ -27,7 +27,7 @@ const LandingPage = () => {
             }}
           >
             “Sachin Tendulkar is a former Indian cricketer, widely regarded to
-            be the greatest cricketer of all time.”
+            be the greatest cricketer of all time. - <i>Wikipedia</i> ”
           </p>
           <p
             className="ssp-300"
