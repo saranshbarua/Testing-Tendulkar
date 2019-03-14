@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import "./dashboard.css";
-import * as Recharts from "recharts";
+import TeamCards from "./Teamcards";
 
 export default class Dashboard extends Component {
   render() {
-    const {
-      LineChart,
-      Line,
-      XAxis,
-      YAxis,
-      CartesianGrid,
-      Tooltip,
-      Legend
-    } = Recharts;
-
-    return <div>Stats</div>;
+    return (
+      <div className="dashboard-container">
+        <div className="sidebar-add">He</div>
+        <div className="teams-container">
+          <header className="team-headline ssp-300">Teams</header>
+          <TeamCards />
+        </div>
+        <div className="playground">dddd</div>
+      </div>
+    );
   }
 }
