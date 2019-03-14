@@ -1,72 +1,19 @@
 import React from "react";
 import "./dashboard.css";
+import { Teams } from "./extract";
 
-const teamData = [
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "Pakistan",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  },
-  {
-    name: "New Zealand",
-    matches: "23"
-  }
-];
-
+const teams = Teams();
 const Cards = props => {
-  return teamData.map((item, i) => {
+  return teams.map((item, i) => {
     return (
       <li
         className="team-card"
         value="nameeee"
         key={i}
         onClick={props.changeTeam}
-        data-id={item.name}
+        data-id={item}
       >
-        <p className="ssp-400">{item.name}</p>
+        <p className="ssp-400">{item}</p>
         {/* <p className="team-matches">{item.matches}</p> */}
       </li>
     );

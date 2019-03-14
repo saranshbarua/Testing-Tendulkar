@@ -15,7 +15,6 @@ export default class Dashboard extends Component {
     this.setState({
       selectedTeam: data.currentTarget.dataset.id
     });
-    console.log(data.currentTarget.dataset.id);
   }
 
   render() {
