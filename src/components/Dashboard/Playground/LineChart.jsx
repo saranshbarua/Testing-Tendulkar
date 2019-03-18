@@ -9,12 +9,21 @@ const LineCharts = props => {
   const data = getRunsPerTeam(props.team);
   return (
     <React.Fragment>
-      <span className="ssp-400">Runs per match</span>
+      <span
+        className="ssp-400"
+        style={{
+          position: "absolute",
+          top: "10px",
+          left: "40px"
+        }}
+      >
+        Runs per match
+      </span>
       <LineChart
         width={900}
         height={250}
         data={data}
-        margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
+        margin={{ top: 35, right: 30, left: 10, bottom: 5 }}
         className="ssp-400"
       >
         <XAxis />

@@ -6,7 +6,8 @@ const Teams = () => {
   for (let i = 0; i < data.length; i++) {
     teams.add(data[i].opposition);
   }
-  return Array.from(teams);
+
+  return Array.from(teams).sort();
 };
 
 // Return runs per match per team from data
