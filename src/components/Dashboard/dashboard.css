@@ -5,6 +5,7 @@
   background-color: #131424;
   display: flex;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .sidebar-add {
@@ -205,6 +206,26 @@
   background-color: #1b2136;
   border-radius: 4px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-info {
+  height: 60px;
+  width: 80px;
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pie-color {
+  height: 15px;
+  width: 15px;
 }
 
 .radar {

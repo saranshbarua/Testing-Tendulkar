@@ -2,20 +2,17 @@ import React from "react";
 import * as Recharts from "recharts";
 import { getMatchResultsPerTeam } from "../extract";
 
-const { PieChart, Pie, Sector, Cell } = Recharts;
-const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 }
-];
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
-
-const RADIAN = Math.PI / 180;
+const { PieChart, Pie, Cell } = Recharts;
 
 const PieCharts = props => {
-  const dte = getMatchResultsPerTeam(props.team);
-  console.log(dte[0]);
+  const result = getMatchResultsPerTeam(props.team);
+
+  const data = [
+    { name: "Wins", value: result[0].won },
+    { name: "Loses", value: result[0].lost }
+  ];
+  const COLORS = ["#0088FE", "#00C49F"];
+
   return (
     <React.Fragment>
       <span
@@ -28,13 +25,13 @@ const PieCharts = props => {
           marginBottom: "10px"
         }}
       >
-        Wins / Loses
+        Match Stats
       </span>
       <PieChart width={400} height={400}>
         <Pie
           data={data}
-          cx={200}
-          cy={120}
+          cx={190}
+          cy={200}
           innerRadius={60}
           outerRadius={80}
           fill="#8884d8"
@@ -46,6 +43,38 @@ const PieCharts = props => {
           ))}
         </Pie>
       </PieChart>
+      <div className="pie-info">
+        <div
+          className="ssp-400"
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "flex-start",
+            alignItems: "center"
+          }}
+        >
+          <div
+            className="pie-color"
+            style={{ backgroundColor: "#0088FE", marginRight: "10px" }}
+          />
+          Wins
+        </div>
+        <div
+          className="ssp-400"
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "flex-start",
+            alignItems: "center"
+          }}
+        >
+          <div
+            className="pie-color"
+            style={{ backgroundColor: "#00C49F", marginRight: "10px" }}
+          />
+          Loses
+        </div>
+      </div>
     </React.Fragment>
   );
 };
