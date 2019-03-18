@@ -187,6 +187,8 @@
   background-color: #1b2136;
   border-radius: 4px;
   margin-top: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
 .dual-row {
@@ -202,6 +204,7 @@
   width: 49%;
   background-color: #1b2136;
   border-radius: 4px;
+  position: relative;
 }
 
 .radar {

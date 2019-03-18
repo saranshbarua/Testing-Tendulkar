@@ -9,4 +9,18 @@ const Teams = () => {
   return Array.from(teams);
 };
 
-export { Teams };
+// Return runs per match per team from data
+const getRunsPerTeam = team => {
+  const runs = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].opposition === team) {
+      runs.push({
+        name: `Match${i + 1}`,
+        runs: data[i].batting_score
+      });
+    }
+  }
+  return runs;
+};
+
+export { Teams, getRunsPerTeam };

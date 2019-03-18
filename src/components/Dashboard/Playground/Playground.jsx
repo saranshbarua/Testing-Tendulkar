@@ -13,7 +13,7 @@ const Playground = props => {
         <div className="small-card card-3 ssp-400">card 3</div>
       </section>
       <section className="line-chart-container">
-        <LineCharts />
+        <LineCharts team={props.team} />
       </section>
       <section className="dual-row">
         <div className="dual-boxes" />
@@ -21,7 +21,6 @@ const Playground = props => {
           <RadarCharts />
         </div>
       </section>
-      {props.team}
     </div>
   );
 };
