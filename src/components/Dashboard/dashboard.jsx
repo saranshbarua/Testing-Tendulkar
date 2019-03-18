@@ -7,7 +7,7 @@ export default class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTeam: "Bangladesh"
+      selectedTeam: "Australia"
     };
     this.setTeam = this.setTeam.bind(this);
   }
