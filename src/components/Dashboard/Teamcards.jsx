@@ -7,11 +7,14 @@ const Cards = props => {
   return teams.map((item, i) => {
     return (
       <li
-        className="team-card"
+        className="team-card team-card-appear"
         value="nameeee"
         key={i}
         onClick={props.changeTeam}
         data-id={item}
+        style={{
+          animationDelay: `${i * 40}ms`
+        }}
       >
         <p className="ssp-400">{item}</p>
         {/* <p className="team-matches">{item.matches}</p> */}
