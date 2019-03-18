@@ -1,6 +1,7 @@
 import React from "react";
 import "../dashboard.css";
 import LineCharts from "./LineChart";
+import PieCharts from "./PieChart";
 
 const Playground = props => {
   return (
@@ -15,7 +16,9 @@ const Playground = props => {
         <LineCharts team={props.team} />
       </section>
       <section className="dual-row">
-        <div className="dual-boxes" />
+        <div className="dual-boxes">
+          <PieCharts team={props.team} />
+        </div>
         <div className="dual-boxes radar" />
       </section>
     </div>
