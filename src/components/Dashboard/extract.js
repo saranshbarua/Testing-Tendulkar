@@ -24,4 +24,25 @@ const getRunsPerTeam = team => {
   return runs;
 };
 
-export { teams, getRunsPerTeam };
+// Return wins/loses per team from data (for pie chart)
+const getMatchResultsPerTeam = team => {
+  let won = 0;
+  let lost = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].opposition === team) {
+      switch (data[i].match_result) {
+        case "won":
+          won++;
+          break;
+        case "lost":
+          lost++;
+          break;
+        default:
+          break;
+      }
+    }
+  }
+  return [{ won: won, lost: lost }];
+};
+
+export { teams, getRunsPerTeam, getMatchResultsPerTeam };

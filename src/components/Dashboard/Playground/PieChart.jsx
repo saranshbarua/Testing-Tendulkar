@@ -1,5 +1,6 @@
 import React from "react";
 import * as Recharts from "recharts";
+import { getMatchResultsPerTeam } from "../extract";
 
 const { PieChart, Pie, Sector, Cell } = Recharts;
 const data = [
@@ -13,6 +14,8 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 const RADIAN = Math.PI / 180;
 
 const PieCharts = props => {
+  const dte = getMatchResultsPerTeam(props.team);
+  console.log(dte[0]);
   return (
     <React.Fragment>
       <span
