@@ -114,11 +114,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  padding-right: 15px;
+  align-items: flex-start;
+  padding-left: 15px;
   font-size: 15px;
   color: #131424;
-  animation: appear 500ms ease-in 1 forwards;
+  animation: appear 900ms ease-in 1 forwards;
   opacity: 0;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
 }
@@ -175,4 +175,16 @@
   100% {
     opacity: 1;
   }
+}
+
+.line-chart-container {
+  width: 95%;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #1b2136;
+  border-radius: 4px;
+  margin-top: 20px;
 }
