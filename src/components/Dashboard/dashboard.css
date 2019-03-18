@@ -10,7 +10,7 @@
 .sidebar-add {
   height: 100vh;
   width: 70px;
-  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.3);
 }
 
 .teams-container {
@@ -50,7 +50,7 @@
   width: 90%;
   margin-bottom: 20px;
   border-radius: 4px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #1b2136;
   display: flex;
   flex-direction: column;
@@ -187,4 +187,26 @@
   background-color: #1b2136;
   border-radius: 4px;
   margin-top: 20px;
+}
+
+.dual-row {
+  width: 95%;
+  height: 250px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dual-boxes {
+  height: 100%;
+  width: 49%;
+  background-color: #1b2136;
+  border-radius: 4px;
+}
+
+.radar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }

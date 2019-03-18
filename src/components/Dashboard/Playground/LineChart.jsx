@@ -25,25 +25,28 @@ const data = [
 
 const LineCharts = () => {
   return (
-    <LineChart
-      width={900}
-      height={300}
-      data={data}
-      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-      className="ssp-400"
-    >
-      <XAxis />
-      <YAxis />
-      <Tooltip />
-      <Line
-        type="monotone"
-        dataKey="pv"
-        stroke="#e91e63"
-        strokeWidth="3"
-        strokeOpacity="0.85"
-        activeDot={{ r: 8 }}
-      />
-    </LineChart>
+    <React.Fragment>
+      <span className="ssp-400">Runs per match</span>
+      <LineChart
+        width={900}
+        height={250}
+        data={data}
+        margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
+        className="ssp-400"
+      >
+        <XAxis />
+        <YAxis />
+        <Tooltip />
+        <Line
+          type="monotone"
+          dataKey="pv"
+          stroke="#e91e63"
+          strokeWidth="3"
+          strokeOpacity="0.85"
+          activeDot={{ r: 8 }}
+        />
+      </LineChart>
+    </React.Fragment>
   );
 };
 
