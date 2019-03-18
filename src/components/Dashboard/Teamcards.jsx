@@ -1,10 +1,10 @@
 import React from "react";
 import "./dashboard.css";
-import { Teams } from "./extract";
+import { teams } from "./extract";
 
-const teams = Teams();
+const teamsList = teams();
 const Cards = props => {
-  return teams.map((item, i) => {
+  return teamsList.map((item, i) => {
     return (
       <li
         className="team-card team-card-appear"

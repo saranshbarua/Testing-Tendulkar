@@ -1,7 +1,7 @@
 import data from "./data.json";
 
-// Return opposition teams from data
-const Teams = () => {
+// Return opposition teams from data (for team list)
+const teams = () => {
   const teams = new Set([]);
   for (let i = 0; i < data.length; i++) {
     teams.add(data[i].opposition);
@@ -10,7 +10,7 @@ const Teams = () => {
   return Array.from(teams).sort();
 };
 
-// Return runs per match per team from data
+// Return runs per match per team from data (for line chart)
 const getRunsPerTeam = team => {
   const runs = [];
   for (let i = 0; i < data.length; i++) {
@@ -24,4 +24,4 @@ const getRunsPerTeam = team => {
   return runs;
 };
 
-export { Teams, getRunsPerTeam };
+export { teams, getRunsPerTeam };

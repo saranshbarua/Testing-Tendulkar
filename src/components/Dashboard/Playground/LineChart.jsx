@@ -13,17 +13,19 @@ const LineCharts = props => {
         className="ssp-400"
         style={{
           position: "absolute",
-          top: "10px",
-          left: "40px"
+          top: "15px",
+          left: "30px",
+          fontSize: "20px",
+          marginBottom: "10px"
         }}
       >
-        Runs per match
+        Runs per match against {props.team}
       </span>
       <LineChart
         width={900}
         height={250}
         data={data}
-        margin={{ top: 35, right: 30, left: 10, bottom: 5 }}
+        margin={{ top: 40, right: 30, left: 0, bottom: -10 }}
         className="ssp-400"
       >
         <XAxis />
