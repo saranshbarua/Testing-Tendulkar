@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./dashboard.css";
 import TeamCards from "./Teamcards";
+import Playground from "./Playground/Playground";
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class Dashboard extends Component {
           <header className="team-headline ssp-300">Teams</header>
           <TeamCards changeTeamContext={this.setTeam} />
         </div>
-        <div className="playground">{this.state.selectedTeam}</div>
+        <Playground team={this.state.selectedTeam} />
       </div>
     );
   }
