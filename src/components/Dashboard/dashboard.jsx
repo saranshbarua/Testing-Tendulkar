@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import "./dashboard.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
 import TeamCards from "./Teamcards";
 import Playground from "./Playground/Playground";
+
+library.add(faLongArrowAltLeft);
 
 export default class Dashboard extends Component {
   constructor(props) {
@@ -21,7 +26,16 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard-container">
-        <div className="sidebar-add" />
+        <div className="sidebar-add">
+          <a
+            href="/"
+            style={{ color: "white", textDecoration: "none", outline: "none" }}
+          >
+            <div className="back-arrow">
+              <FontAwesomeIcon icon="long-arrow-alt-left" size="2x" />
+            </div>
+          </a>
+        </div>
         <div className="teams-container">
           <header className="team-headline ssp-300">Teams</header>
           <TeamCards
