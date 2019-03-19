@@ -54,9 +54,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #1b2136;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   padding-left: 20px;
   transition: all 300ms ease-in-out;
   transform: translateY(150px);
@@ -65,6 +64,21 @@
 .team-card:hover {
   min-height: 110px;
   cursor: pointer;
+}
+
+.team-name {
+  transition: all 300ms ease-in-out;
+}
+
+.team-matches {
+  color: white;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.team-card:hover .team-name {
+  transform: translateY(-30px);
+  font-size: 20px;
 }
 
 .team-card-appear {
@@ -110,7 +124,7 @@
 .small-card {
   height: 90px;
   width: 250px;
-  border-radius: 3px;
+  border-radius: 4px;
   margin-right: 30px;
   display: flex;
   flex-direction: column;

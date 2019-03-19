@@ -16,8 +16,8 @@ const Cards = props => {
           animationDelay: `${i * 40}ms`
         }}
       >
-        <p className="ssp-400">{item}</p>
-        {/* <p className="team-matches">{item.matches}</p> */}
+        <p className="ssp-400 team-name">{item}</p>
+        <span className="ssp-400 team-matches">231 matches</span>
       </li>
     );
   });
