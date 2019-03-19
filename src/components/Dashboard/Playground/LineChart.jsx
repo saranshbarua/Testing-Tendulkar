@@ -41,6 +41,17 @@ const LineCharts = props => {
           activeDot={{ r: 8 }}
         />
       </LineChart>
+      <span
+        className="ssp-400"
+        style={{
+          color: "white",
+          position: "absolute",
+          bottom: "7px",
+          left: "47%"
+        }}
+      >
+        Matches
+      </span>
     </React.Fragment>
   );
 };
