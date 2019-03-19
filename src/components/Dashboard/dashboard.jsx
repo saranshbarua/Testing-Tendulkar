@@ -24,7 +24,10 @@ export default class Dashboard extends Component {
         <div className="sidebar-add" />
         <div className="teams-container">
           <header className="team-headline ssp-300">Teams</header>
-          <TeamCards changeTeamContext={this.setTeam} />
+          <TeamCards
+            activeTeam={this.state.selectedTeam}
+            changeTeamContext={this.setTeam}
+          />
         </div>
         <Playground team={this.state.selectedTeam} />
       </div>

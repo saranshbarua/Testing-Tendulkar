@@ -77,7 +77,6 @@
 }
 
 .team-card:hover .team-name {
-  transform: translateY(-30px);
   font-size: 20px;
 }
 
@@ -131,7 +130,7 @@
   justify-content: center;
   align-items: flex-start;
   padding-left: 15px;
-  font-size: 15px;
+  font-size: 25px;
   color: #131424;
   animation: appear 900ms ease-in 1 forwards;
   opacity: 0;
@@ -168,17 +167,18 @@
 }
 
 .card-3 {
-  background: #a8ff78; /* fallback for old browsers */
+  background: #11998e; /* fallback for old browsers */
   background: -webkit-linear-gradient(
-    to right,
-    #78ffd6,
-    #a8ff78
+    to left,
+    #38ef7d,
+    #11998e
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    to right,
-    #78ffd6,
-    #a8ff78
+    to left,
+    #38ef7d,
+    #11998e
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   animation-delay: 200ms;
 }
 

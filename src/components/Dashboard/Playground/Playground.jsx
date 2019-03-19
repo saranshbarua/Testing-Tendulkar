@@ -11,20 +11,17 @@ const Playground = props => {
     <div className="playground">
       <header className="ssp-300 playground-headline">Overview</header>
       <section className="single-insight-cards">
-        <div className="small-card card-1 ssp-400">{res.totalRuns} Runs</div>
+        <div className="small-card card-1 ssp-400">
+          <span style={{ fontSize: "18px", color: "white" }}>Runs</span>
+          {res.totalRuns}
+        </div>
         <div className="small-card card-2 ssp-400">
-          {res.totalWickets === 1 ? (
-            <span>{res.totalWickets} Wicket</span>
-          ) : (
-            <span>{res.totalWickets} Wickets</span>
-          )}
+          <span style={{ fontSize: "18px", color: "white" }}>Wickets</span>
+          {res.totalWickets}
         </div>
         <div className="small-card card-3 ssp-400">
-          {res.totalCatches === 1 ? (
-            <span>{res.totalCatches} Catch</span>
-          ) : (
-            <span>{res.totalCatches} Catches</span>
-          )}
+          <span style={{ fontSize: "18px", color: "white" }}>Catches</span>
+          {res.totalCatches}
         </div>
       </section>
       <section className="line-chart-container">
