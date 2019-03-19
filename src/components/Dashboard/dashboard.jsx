@@ -25,26 +25,35 @@ export default class Dashboard extends Component {
 
   render() {
     return (
-      <div className="dashboard-container">
-        <div className="sidebar-add">
-          <a
-            href="/"
-            style={{ color: "white", textDecoration: "none", outline: "none" }}
-          >
-            <div className="back-arrow">
-              <FontAwesomeIcon icon="long-arrow-alt-left" size="2x" />
-            </div>
-          </a>
+      <React.Fragment>
+        <div className="dashboard-placeholder ssp-300">
+          To view dashboard switch to larger device
         </div>
-        <div className="teams-container">
-          <header className="team-headline ssp-300">Teams</header>
-          <TeamCards
-            activeTeam={this.state.selectedTeam}
-            changeTeamContext={this.setTeam}
-          />
+        <div className="dashboard-container">
+          <div className="sidebar-add">
+            <a
+              href="/"
+              style={{
+                color: "white",
+                textDecoration: "none",
+                outline: "none"
+              }}
+            >
+              <div className="back-arrow">
+                <FontAwesomeIcon icon="long-arrow-alt-left" size="2x" />
+              </div>
+            </a>
+          </div>
+          <div className="teams-container">
+            <header className="team-headline ssp-300">Teams</header>
+            <TeamCards
+              activeTeam={this.state.selectedTeam}
+              changeTeamContext={this.setTeam}
+            />
+          </div>
+          <Playground team={this.state.selectedTeam} />
         </div>
-        <Playground team={this.state.selectedTeam} />
-      </div>
+      </React.Fragment>
     );
   }
 }
