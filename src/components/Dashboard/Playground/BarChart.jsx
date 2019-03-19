@@ -24,10 +24,11 @@ const BarCharts = props => {
         width={400}
         height={200}
         data={result}
-        margin={{ top: 30, right: 40, left: -20, bottom: -20 }}
+        margin={{ top: 30, right: 40, left: -20, bottom: -30 }}
         className="ssp-400"
+        style={{ color: "#1b2136" }}
       >
-        <XAxis dataKey="name" />
+        <XAxis dataKey="ground" />
         <YAxis />
         <Tooltip />
         <Bar dataKey="won" stackId="a" fill="#8884d8" />
