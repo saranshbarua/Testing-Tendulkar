@@ -1,6 +1,6 @@
 import React from "react";
-import "./dashboard.css";
-import { teams } from "./extract";
+import "../dashboard.css";
+import { teams } from "../extract";
 
 const Cards = props => {
   const teamsList = teams();

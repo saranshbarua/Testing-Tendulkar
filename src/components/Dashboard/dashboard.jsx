@@ -4,7 +4,7 @@ import "./dashboard.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltLeft } from "@fortawesome/free-solid-svg-icons";
-import TeamCards from "./Teamcards";
+import TeamCards from "./TeamCards/Teamcards";
 import Playground from "./Playground/Playground";
 
 library.add(faLongArrowAltLeft);
