@@ -1,15 +1,5 @@
 import data from "./data.json";
 
-// Return opposition teams from data (for team list)
-const teams = () => {
-  const teams = new Set([]);
-  for (let i = 0; i < data.length; i++) {
-    teams.add(data[i].opposition);
-  }
-
-  return Array.from(teams).sort();
-};
-
 //Return Total runs, catches and wickets against a team (for small cards)
 const getSummarizedStats = team => {
   let totalRuns = 0;
@@ -23,7 +13,9 @@ const getSummarizedStats = team => {
       if (data[i].wickets !== "-") {
         totalWickets += parseInt(data[i].wickets, 10);
       }
-      totalCatches += parseInt(data[i].catches);
+      if (data[i].catches !== "-") {
+        totalCatches += parseInt(data[i].catches, 10);
+      }
     }
   }
   return { totalRuns, totalCatches, totalWickets };
@@ -78,7 +70,7 @@ const getStadiumStats = team => {
     }
   }
 
-  //create an array of object for each unique stadium
+  //create an array of object for each unique stadium with default values(0)
   stadiumList.forEach(stadium => {
     return stadiumStats.push({
       ground: stadium,
@@ -107,6 +99,44 @@ const getStadiumStats = team => {
     }
   }
   return stadiumStats;
+};
+
+// Return opposition teams and respective matches from data (for team list)
+const teams = () => {
+  const teams = new Set([]);
+  let teamStats = [];
+  for (let i = 0; i < data.length; i++) {
+    teams.add(data[i].opposition);
+  }
+
+  teams.forEach(team => {
+    return teamStats.push({
+      teamName: team,
+      matches: 0
+    });
+  });
+
+  for (let i = 0; i < data.length; i++) {
+    for (let j = 0; j < teamStats.length; j++) {
+      if (teamStats[j].teamName === data[i].opposition) {
+        teamStats[j].matches++;
+      }
+    }
+  }
+
+  let sortedTeamDetails = teamStats.sort((a, b) => {
+    let nameA = a.teamName.replace(/\.| /g, "").toLowerCase();
+    let nameB = b.teamName.replace(/\.| /g, "").toLowerCase();
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
+  });
+
+  return sortedTeamDetails;
 };
 
 export {

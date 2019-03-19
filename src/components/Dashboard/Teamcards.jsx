@@ -11,13 +11,13 @@ const Cards = props => {
         value="nameeee"
         key={i}
         onClick={props.changeTeam}
-        data-id={item}
+        data-id={item.teamName}
         style={{
           animationDelay: `${i * 40}ms`
         }}
       >
-        <p className="ssp-400 team-name">{item}</p>
-        <span className="ssp-400 team-matches">231 matches</span>
+        <p className="ssp-400 team-name">{item.teamName}</p>
+        <span className="ssp-400 team-matches">{item.matches} matches</span>
       </li>
     );
   });
