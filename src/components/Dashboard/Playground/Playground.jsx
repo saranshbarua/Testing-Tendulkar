@@ -9,7 +9,9 @@ const Playground = props => {
   const res = getSummarizedStats(props.team);
   return (
     <div className="playground">
-      <header className="ssp-300 playground-headline">Overview</header>
+      <header className="ssp-300 playground-headline">
+        Sachin vs {props.team}
+      </header>
       <section className="single-insight-cards">
         <div className="small-card card-1 ssp-400">
           <span style={{ fontSize: "18px", color: "white" }}>Runs</span>

@@ -38,7 +38,7 @@ const LandingPage = () => {
             Is he really?
           </p>
           <Fade bottom delay={10000}>
-            <a href="/dashboard" className="ssp-400 insights-button">
+            <a href="/stats" className="ssp-400 insights-button">
               See career insights
             </a>
           </Fade>

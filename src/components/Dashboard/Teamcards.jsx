@@ -19,7 +19,7 @@ const Cards = props => {
             borderBottom: "5px solid #2F82EC"
           }}
         >
-          <p className="ssp-400 team-name" style={{ fontSize: "20px" }}>
+          <p className="ssp-400 team-name" style={{ fontSize: "21px" }}>
             {item.teamName}
           </p>
           {item.matches === 1 ? (
