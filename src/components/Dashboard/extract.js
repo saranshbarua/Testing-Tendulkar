@@ -10,6 +10,25 @@ const teams = () => {
   return Array.from(teams).sort();
 };
 
+//Return Total runs, catches and wickets against a team (for small cards)
+const getSummarizedStats = team => {
+  let totalRuns = 0;
+  let totalCatches = 0;
+  let totalWickets = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].opposition === team) {
+      if (data[i].batting_score !== "TDNB" && data[i].batting_score !== "DNB") {
+        totalRuns += parseInt(data[i].batting_score, 10);
+      }
+      if (data[i].wickets !== "-") {
+        totalWickets += parseInt(data[i].wickets, 10);
+      }
+      totalCatches += parseInt(data[i].catches);
+    }
+  }
+  return { totalRuns, totalCatches, totalWickets };
+};
+
 // Return runs per match per team from data (for line chart)
 const getRunsPerTeam = team => {
   const runs = [];
@@ -42,7 +61,7 @@ const getMatchResultsPerTeam = team => {
       }
     }
   }
-  return [{ won: won, lost: lost }];
+  return { won, lost };
 };
 
-export { teams, getRunsPerTeam, getMatchResultsPerTeam };
+export { teams, getSummarizedStats, getRunsPerTeam, getMatchResultsPerTeam };

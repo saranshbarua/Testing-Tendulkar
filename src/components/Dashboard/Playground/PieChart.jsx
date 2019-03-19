@@ -8,9 +8,10 @@ const PieCharts = props => {
   const result = getMatchResultsPerTeam(props.team);
 
   const data = [
-    { name: "Wins", value: result[0].won },
-    { name: "Loses", value: result[0].lost }
+    { name: "Wins", value: result.won },
+    { name: "Loses", value: result.lost }
   ];
+
   const COLORS = ["#0088FE", "#00C49F"];
 
   return (
@@ -39,7 +40,11 @@ const PieCharts = props => {
           paddingAngle={5}
         >
           {data.map((entry, index) => (
-            <Cell key="index+{index}" fill={COLORS[index % COLORS.length]} />
+            <Cell
+              key="index+{index}"
+              value={entry.value}
+              fill={COLORS[index % COLORS.length]}
+            />
           ))}
         </Pie>
       </PieChart>
