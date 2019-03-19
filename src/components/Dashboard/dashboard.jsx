@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./dashboard.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,18 +32,11 @@ export default class Dashboard extends Component {
         </div>
         <div className="dashboard-container">
           <div className="sidebar-add">
-            <a
-              href="/"
-              style={{
-                color: "white",
-                textDecoration: "none",
-                outline: "none"
-              }}
-            >
+            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
               <div className="back-arrow">
                 <FontAwesomeIcon icon="long-arrow-alt-left" size="2x" />
               </div>
-            </a>
+            </Link>
           </div>
           <div className="teams-container">
             <header className="team-headline ssp-300">Teams</header>

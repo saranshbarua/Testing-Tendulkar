@@ -1,6 +1,7 @@
 import React from "react";
 import "./landingPage.css";
 import Fade from "react-reveal";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -32,11 +33,13 @@ const LandingPage = () => {
             <br />
             Does the data agree? Let's find out.
           </p>
-          <Fade bottom delay={10000}>
-            <a href="/stats" className="ssp-400 insights-button">
-              See career insights
-            </a>
-          </Fade>
+          <Link to="/stats" style={{ textDecoration: "none" }}>
+            <Fade bottom delay={10000}>
+              <button className="ssp-400 insights-button">
+                See career insights
+              </button>
+            </Fade>
+          </Link>
         </Fade>
       </div>
       <div className="lp-border" />
