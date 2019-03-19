@@ -21,21 +21,16 @@ const LandingPage = () => {
         <br />
         <Fade bottom delay={8000}>
           <p
-            className="ssp-300"
+            className="ssp-300 lp-subhead"
             style={{
               color: "white"
             }}
           >
             “Sachin Tendulkar is a former Indian cricketer, widely regarded to
             be the greatest cricketer of all time. - <i>Wikipedia</i> ”
-          </p>
-          <p
-            className="ssp-300"
-            style={{
-              color: "white"
-            }}
-          >
-            Is he really?
+            <br />
+            <br />
+            Does the data agree? Let's find out.
           </p>
           <Fade bottom delay={10000}>
             <a href="/stats" className="ssp-400 insights-button">
