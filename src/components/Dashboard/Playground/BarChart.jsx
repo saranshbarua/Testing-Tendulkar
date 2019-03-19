@@ -24,7 +24,7 @@ const BarCharts = props => {
         width={400}
         height={200}
         data={result}
-        margin={{ top: 30, right: 40, left: -40, bottom: -20 }}
+        margin={{ top: 30, right: 40, left: -20, bottom: -20 }}
         className="ssp-400"
       >
         <XAxis dataKey="name" />

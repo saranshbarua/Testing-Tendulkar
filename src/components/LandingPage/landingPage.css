@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-image: linear-gradient(-180deg, #14233c 43%, #0d1b32);
+  /* background-image: linear-gradient(-180deg, #14233c 43%, #0d1b32); */
+  background-color: #1b2136;
 }
 
 .num {
