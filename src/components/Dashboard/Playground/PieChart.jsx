@@ -8,10 +8,11 @@ const PieCharts = props => {
   const result = getMatchResultsPerTeam(props.team);
   const data = [
     { name: "Wins", value: result.won },
-    { name: "Loses", value: result.lost }
+    { name: "Loses", value: result.lost },
+    { name: "Draw", value: result.draw }
   ];
 
-  const COLORS = ["#0088FE", "#00C49F"];
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28"];
 
   return (
     <React.Fragment>
@@ -62,7 +63,7 @@ const PieCharts = props => {
             className="pie-color"
             style={{ backgroundColor: "#0088FE", marginRight: "10px" }}
           />
-          Wins
+          Won
         </div>
         <div
           className="ssp-400"
@@ -77,7 +78,22 @@ const PieCharts = props => {
             className="pie-color"
             style={{ backgroundColor: "#00C49F", marginRight: "10px" }}
           />
-          Loses
+          Lost
+        </div>
+        <div
+          className="ssp-400"
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "flex-start",
+            alignItems: "center"
+          }}
+        >
+          <div
+            className="pie-color"
+            style={{ backgroundColor: "#FFBB28", marginRight: "10px" }}
+          />
+          Draw
         </div>
       </div>
     </React.Fragment>

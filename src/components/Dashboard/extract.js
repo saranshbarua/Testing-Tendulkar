@@ -47,6 +47,7 @@ const getRunsPerTeam = team => {
 const getMatchResultsPerTeam = team => {
   let won = 0;
   let lost = 0;
+  let draw = 0;
   for (let i = 0; i < data.length; i++) {
     if (data[i].opposition === team) {
       switch (data[i].match_result) {
@@ -56,12 +57,15 @@ const getMatchResultsPerTeam = team => {
         case "lost":
           lost++;
           break;
+        case "n/r":
+          draw++;
+          break;
         default:
           break;
       }
     }
   }
-  return { won, lost };
+  return { won, lost, draw };
 };
 
 export { teams, getSummarizedStats, getRunsPerTeam, getMatchResultsPerTeam };
