@@ -68,4 +68,51 @@ const getMatchResultsPerTeam = team => {
   return { won, lost, draw };
 };
 
-export { teams, getSummarizedStats, getRunsPerTeam, getMatchResultsPerTeam };
+//Return Stadium stats per team from data (for bar chart)
+const getStadiumStats = team => {
+  let stadiumList = new Set([]);
+  let stadiumStats = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].opposition === team) {
+      stadiumList.add(data[i].ground);
+    }
+  }
+
+  //create an array of object for each unique stadium
+  stadiumList.forEach(stadium => {
+    return stadiumStats.push({
+      ground: stadium,
+      won: 0,
+      lost: 0
+    });
+  });
+
+  //update stadiumStats
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].match_result === "won") {
+      for (let j = 0; j < stadiumStats.length; j++) {
+        if (
+          stadiumStats[j].ground === data[i].ground &&
+          data[i].opposition === team
+        ) {
+          stadiumStats[j].won++;
+        }
+      }
+    } else if (data[i].match_result === "lost" && data[i].opposition === team) {
+      for (let j = 0; j < stadiumStats.length; j++) {
+        if (stadiumStats[j].ground === data[i].ground) {
+          stadiumStats[j].lost++;
+        }
+      }
+    }
+  }
+  return stadiumStats;
+};
+
+export {
+  teams,
+  getSummarizedStats,
+  getRunsPerTeam,
+  getMatchResultsPerTeam,
+  getStadiumStats
+};
