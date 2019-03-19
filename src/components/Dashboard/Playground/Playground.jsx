@@ -13,10 +13,18 @@ const Playground = props => {
       <section className="single-insight-cards">
         <div className="small-card card-1 ssp-400">{res.totalRuns} Runs</div>
         <div className="small-card card-2 ssp-400">
-          {res.totalWickets} Wickets
+          {res.totalWickets === 1 ? (
+            <span>{res.totalWickets} Wicket</span>
+          ) : (
+            <span>{res.totalWickets} Wickets</span>
+          )}
         </div>
         <div className="small-card card-3 ssp-400">
-          {res.totalCatches} Catches
+          {res.totalCatches === 1 ? (
+            <span>{res.totalCatches} Catch</span>
+          ) : (
+            <span>{res.totalCatches} Catches</span>
+          )}
         </div>
       </section>
       <section className="line-chart-container">

@@ -17,7 +17,11 @@ const Cards = props => {
         }}
       >
         <p className="ssp-400 team-name">{item.teamName}</p>
-        <span className="ssp-400 team-matches">{item.matches} matches</span>
+        {item.matches === 1 ? (
+          <span className="ssp-400 team-matches">{item.matches} match</span>
+        ) : (
+          <span className="ssp-400 team-matches">{item.matches} matches</span>
+        )}
       </li>
     );
   });
