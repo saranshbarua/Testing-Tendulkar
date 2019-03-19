@@ -2,6 +2,7 @@ import React from "react";
 import "../dashboard.css";
 import LineCharts from "./LineChart";
 import PieCharts from "./PieChart";
+import PieChartStaium from "./PieChartStadium";
 import { getSummarizedStats } from "../extract";
 
 const Playground = props => {
@@ -25,7 +26,9 @@ const Playground = props => {
         <div className="dual-boxes">
           <PieCharts team={props.team} />
         </div>
-        <div className="dual-boxes radar" />
+        <div className="dual-boxes radar">
+          <PieChartStaium team={props.team} />
+        </div>
       </section>
     </div>
   );

@@ -27,6 +27,7 @@ const LineCharts = props => {
         data={data}
         margin={{ top: 40, right: 30, left: 0, bottom: -10 }}
         className="ssp-400"
+        style={{ color: "#e91e63" }}
       >
         <XAxis />
         <YAxis />
