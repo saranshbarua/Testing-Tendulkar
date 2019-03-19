@@ -9,7 +9,7 @@ const LandingPage = () => {
       <div className="lp-image">
         <Fade>
           <img
-            src="http://www.mobileswall.com/wp-content/uploads/2015/01/640-Sachin-Tendulkar-God-of-Cricket-l.jpg"
+            src="/sachinMain.jpg"
             alt="Sachin's poster"
             className="img-card"
           />
