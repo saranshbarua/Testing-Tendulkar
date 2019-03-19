@@ -44,6 +44,7 @@ const LandingPage = () => {
           </Fade>
         </Fade>
       </div>
+      <div className="lp-border" />
     </section>
   );
 };

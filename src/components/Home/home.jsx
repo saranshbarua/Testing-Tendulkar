@@ -10,7 +10,6 @@ const Home = () => {
   return (
     <main className="container">
       <LandingPage />
-      <Insights />
     </main>
   );
 };

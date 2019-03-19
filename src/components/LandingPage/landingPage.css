@@ -1,11 +1,12 @@
 .lp-sec {
-  height: 98vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   /* background-image: linear-gradient(-180deg, #14233c 43%, #0d1b32); */
   background-color: #1b2136;
+  position: relative;
 }
 
 .num {
@@ -69,6 +70,24 @@
 
 .insights-button:hover {
   cursor: pointer;
+}
+
+.lp-border {
+  position: absolute;
+  height: 17px;
+  width: 100%;
+  bottom: 0px;
+  background: #00c6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0072ff,
+    #00c6ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0072ff,
+    #00c6ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 @media screen and (min-width: 800px) {
