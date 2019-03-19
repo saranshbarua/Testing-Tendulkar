@@ -4,7 +4,6 @@ import "./home.css";
 
 // Components
 import LandingPage from "../LandingPage/landingPage";
-import Insights from "../Insights/insights";
 
 const Home = () => {
   return (

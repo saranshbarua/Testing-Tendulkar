@@ -1,10 +1,11 @@
 .lp-sec {
   height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* background-image: linear-gradient(-180deg, #14233c 43%, #0d1b32); */
   background-color: #1b2136;
   position: relative;
 }
@@ -56,7 +57,6 @@
   width: 200px;
   text-decoration: none;
   outline: none;
-  margin-top: 15px;
   font-size: 16px;
   display: flex;
   justify-content: center;
