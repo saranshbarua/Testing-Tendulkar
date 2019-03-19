@@ -14,6 +14,8 @@ Use the given [data](https://drive.google.com/file/d/0B2W2LMb5AIVldEZNSGJkeWNjcH
 
 A Dashboard built on **React** to visualize the stats of Sachin's entire career including runs scored per match against each team, number of wins/loses, stadium insights etc.
 
+## [See Solution](https://testing10dulkar.netlify.com/)
+
 <br>
 
 **Screenshots:**
