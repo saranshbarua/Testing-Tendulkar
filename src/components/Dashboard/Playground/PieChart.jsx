@@ -6,7 +6,6 @@ const { PieChart, Pie, Cell } = Recharts;
 
 const PieCharts = props => {
   const result = getMatchResultsPerTeam(props.team);
-
   const data = [
     { name: "Wins", value: result.won },
     { name: "Loses", value: result.lost }
@@ -28,7 +27,7 @@ const PieCharts = props => {
       >
         Match Stats
       </span>
-      <PieChart width={400} height={400}>
+      <PieChart width={400} height={400} className="ssp-700">
         <Pie
           data={data}
           cx={190}
@@ -38,11 +37,12 @@ const PieCharts = props => {
           fill="#8884d8"
           dataKey="value"
           paddingAngle={5}
+          label
         >
           {data.map((entry, index) => (
             <Cell
-              key="index+{index}"
-              value={entry.value}
+              key={`cell-${index}`}
+              dataKey={entry.value}
               fill={COLORS[index % COLORS.length]}
             />
           ))}
