@@ -297,3 +297,28 @@
     display: none;
   }
 }
+
+@media screen and (max-height: 770px) {
+  .single-insight-cards {
+    height: 85px;
+  }
+
+  .playground-headline,
+  .team-headline {
+    height: 66px;
+  }
+
+  .dual-row {
+    height: 240px;
+    margin-top: 15px;
+  }
+
+  .back-arrow {
+    height: 50px;
+  }
+
+  .small-card {
+    height: 80px;
+    width: 235px;
+  }
+}
